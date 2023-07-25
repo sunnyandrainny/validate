@@ -62,7 +62,7 @@ function Validator(options){
                 if(typeof options.onSubmit === 'function'){
                     var enableInputs = formElement.querySelectorAll('[name]')
                     var formValues = Array.from(enableInputs).reduce(function(values, input){
-                        switch(input, type){
+                        switch(input.type){
                             case 'radio':
                                 values[input.name] = formElement.querySelector('input[name="' + input.name + '"]:checked').value
                                 break;
